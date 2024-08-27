@@ -45,7 +45,7 @@
     display: inline-block;
     font-size: 250px;
     font-weight: 700;
-    -webkit-text-stroke: 10px rgba(255, 255, 255, 0.3);
+    -webkit-text-stroke: 4px rgba(255, 255, 255, 0.3);
     -webkit-text-fill-color: transparent;
     transform: translatey(100px);
     opacity: 0;
@@ -88,7 +88,7 @@
     position: relative;
 } 
 
-/* @media (max-width: 800px) {
+@media (max-width: 800px) {
     .back-text span {
         font-size: 150px;
     }
@@ -112,4 +112,4 @@
         height: 50vh;
         padding-top: 300px;
     }
-} */
+}
