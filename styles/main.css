@@ -45,7 +45,7 @@
     display: inline-block;
     font-size: 250px;
     font-weight: 700;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    -webkit-text-stroke: 4px rgba(255, 255, 255, 0.3);
     -webkit-text-fill-color: transparent;
     transform: translatey(100px);
     opacity: 0;
@@ -98,5 +98,18 @@
     .hero0, .hero1 {
         height: 50vh;
         padding-top: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    .back-text span {
+        font-size: 100px;
+    }
+    .title h1 {
+        font-size: 30px;
+    }
+    .hero0, .hero1 {
+        height: 50vh;
+        padding-top: 300px;
     }
 }
