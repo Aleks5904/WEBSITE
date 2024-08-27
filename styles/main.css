@@ -5,12 +5,19 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-.hero{
+.hero0{
     width: 100%;
-    height: 100vh;
+    height: 40vh;
     background-color: #292929;
     padding-top:200px;
 }
+.hero1{
+    width: 100%;
+    height: 40vh;
+    background-color: lightcyan;
+    padding-top:200px;
+}
+
 
 .title{
     margin: auto;
@@ -62,4 +69,34 @@
 
 .back-text:hover span{
     -webkit-text-stroke-color: #e8ffce;
+}
+
+.subText{
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    font-family: 'Brutal', sans-serif;
+                                                
+} 
+.abt{
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    color: black;
+    position: relative;
+} 
+
+@media (max-width: 800px) {
+    .back-text span {
+        font-size: 150px;
+    }
+    .title h1 {
+        font-size: 50px;
+    }
+    .hero0, .hero1 {
+        height: 50vh;
+        padding-top: 200px;
+    }
 }
