@@ -14,9 +14,32 @@
 .hero1{
     width: 100%;
     height: 40vh;
-    background-color: lightcyan;
-    padding-top:200px;
+    background-color: rgb(94, 94, 94);
+    padding-top: 150px;
 }
+
+.hero2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: auto; /* Remove fixed height to allow for content growth */
+    min-height: 60vh; /* Ensures it takes at least the full viewport height */
+    background-color: rgb(147, 147, 147);
+    padding-top: 110px;
+    box-sizing: border-box;
+}
+
+
+.rights {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
 
 
 .title{
@@ -47,9 +70,16 @@
     font-weight: 700;
     -webkit-text-stroke: 4px rgba(255, 255, 255, 0.3);
     -webkit-text-fill-color: transparent;
-    transform: translatey(100px);
     opacity: 0;
-    transition: transform 1s, opacity 0.5s, -webkit-text-stroke-color 0.3s;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px); /* Adjust this value to control the floating height */
+    }
 }
 
 .back-text span.active{
@@ -58,18 +88,15 @@
 }
 
 .back-text span:nth-child(1){
-    transition-delay: 0.5s;
-}
-.back-text span:nth-child(2){
     transition-delay: 1s;
 }
-.back-text span:nth-child(3){
+.back-text span:nth-child(2){
     transition-delay: 1.5s;
 }
-
-.back-text:hover span{
-    -webkit-text-stroke-color: #e8ffce;
+.back-text span:nth-child(3){
+    transition-delay: 2s;
 }
+
 
 .subText{
     margin: auto;
@@ -80,13 +107,58 @@
     font-family: 'Brutal', sans-serif;
                                                 
 } 
-.abt{
+.coinabt{
     margin: auto;
     width: fit-content;
     text-align: center;
     color: black;
     position: relative;
 } 
+
+.coinabt h1{
+    font-family:"Nerko One", cursive ;
+}
+
+.abt{
+    font-family:"Nerko One", cursive ;
+    margin: auto;
+    width: 65%;
+    text-align: center;
+    color: black;
+    position: relative;
+}
+
+.howToBuy{
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    color: rgb(171, 33, 33);
+    position: relative;
+}
+
+.howToBuy h1{
+    font-family:"Nerko One", cursive ;
+}
+
+.howToBuyAbt{
+    font-family:"Nerko One", cursive ;
+    margin: auto;
+    width: 65%;
+    text-align: center;
+    color: black;
+    position: relative;
+    flex-grow: 1; 
+}
+
+
+/* .rights {
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    text-align: center; 
+    padding: 10px 0; 
+    background-color: rgba(0, 0, 0, 0.1); 
+} */
 
 @media (max-width: 800px) {
     .back-text span {
@@ -97,7 +169,14 @@
     }
     .hero0, .hero1 {
         height: 50vh;
-        padding-top: 200px;
+        padding-top: 100px;
+
+    }
+    .hero2{
+        padding-top: 50px;
+    }
+    .howToBuyAbt{
+        font-size: small;
     }
 }
 
@@ -108,8 +187,17 @@
     .title h1 {
         font-size: 30px;
     }
-    .hero0, .hero1 {
+    .hero0{
+        height: 25vh;
+    }
+    .hero1{
         height: 50vh;
-        padding-top: 300px;
+        padding-top: 50px;
+    }
+    .hero2{
+        height: 95vh;
+    }
+    .abt{
+        font-size: small;
     }
 }
